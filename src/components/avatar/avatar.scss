@@ -1,0 +1,15 @@
+@import "../../utils/colors.scss";
+
+.avatar {
+  border-radius: 40px;
+  box-shadow: 5px 1px 5px rgb(184, 184, 184);
+  border: none;
+  outline: none;
+  background-repeat: no-repeat;
+  &__user-page {
+    width: 110px;
+    height: 110px;
+    border-radius: 60px;
+    background-image: url(../../images/floppy.svg);
+  };
+};

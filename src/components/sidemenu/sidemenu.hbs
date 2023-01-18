@@ -1,0 +1,16 @@
+{{#if folded}}
+<div class="sidemenu sidemenu_folded">
+  {{>logo}}
+  {{>chats folded=folded}}
+</div>
+{{else}}
+<div class="sidemenu">
+  {{>input class="input__search"
+           id="searchSidemenu"
+           value=""
+           placeholder="Найти &nbsp; &nbsp; &#128270;"
+           type="text"}}
+  {{>chats folded=folded}}
+  {{>sidemenuFooter}}
+</div>
+{{/if}}

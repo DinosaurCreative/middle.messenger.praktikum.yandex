@@ -1,0 +1,19 @@
+@import "../../../utils/colors.scss";
+
+.sidemenu-footer {
+  position: relative;
+  margin: auto auto 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: baseline;
+  width: 90%;
+  &::before {
+    content: "";
+    position: absolute;
+    border-top: 2px solid $lightgrey;
+    width: 130%;
+    top: -1px;
+    right: -30px;
+  };
+};

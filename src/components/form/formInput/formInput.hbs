@@ -1,0 +1,13 @@
+<field class="input__container">
+  <label for={{id}} class="input__label">{{title}}</label>
+    <input id={{id}} 
+           name={{id}}
+           type={{type}}
+           class="input__form input__form_error"
+           value={{#ifinputValue}}
+      {{inputValue}}{{/if}}>
+    </input>
+  {{#if errorMessage}}
+    <span name={{id}} class="input__error-msg">{{errorMessage}}</span>
+  {{/if}}
+</field>

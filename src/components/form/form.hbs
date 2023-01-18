@@ -1,0 +1,18 @@
+{{#if text}}
+  {{>header class="header__form" text=text}}
+{{/if}}
+<form class="form {{formClass}}" type={{type}} id={{formId}}>
+  {{#each inputs}}
+    {{>formInput id=id 
+                 labeClass=labeClass 
+                 title=title
+                 type=type
+                 errorMessage="error"
+                 inputValue=value
+                 }}
+  {{/each}}
+  {{>button id=btnId
+            value=value
+            class=btnClass
+            type=type}}
+</form>

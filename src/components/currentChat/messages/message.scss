@@ -1,0 +1,66 @@
+@import "../../../utils/colors.scss";
+
+.message {
+  width: auto;
+  margin: auto 30px 35px;
+  display: flex;
+  flex-direction: column;
+  &__image {
+    max-width: 250px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgb(184, 184, 184);
+    margin: 10px auto 20px 0;
+  };
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    padding: 8px 18px 10px;
+    border-radius: 10px;
+    position: relative;
+    column-gap: 50px;
+    &_received {
+      background-color: $incomingMsgWhite;
+      margin-bottom: 10px;
+    };
+    &_sent {
+      margin: 0 0 0 auto;
+      background-color: $messageLigthBlue;
+    };
+  };
+  &__text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 50px;
+    &_sent {
+      padding-bottom: 10px;
+      margin: 0 0 0;
+    };
+  };
+  &__text {
+    font-size: 15px;
+    margin: 0;
+    line-height: 22px;
+  };
+  &__tick {
+    background-image: url(../../../images/tick.svg);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    right: 18px;
+  };
+  &__read {
+    position: absolute;
+    font-size: 10px ;
+    margin: 0;
+    line-height: 12px;
+    top: 10px;
+    right: 18px;
+  };
+};

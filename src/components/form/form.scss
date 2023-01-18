@@ -1,0 +1,14 @@
+@import "../../utils/colors.scss";
+
+.form {
+  &__welcome {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  };
+  &__user-data{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  };
+};

@@ -1,0 +1,16 @@
+
+<div class="popup {{popupClass}}">
+  {{#if chat}}
+    {{>button id="clear" class="button__chat button__chat_clear" type="button" value=clearVal }}
+    {{>button id="remove" class="button__chat button__chat_remove" type="button" value=removeVal }}
+  {{/if}}
+  {{#if input}}
+    {{>button id="pic" class="button__chat button__chat_pic" type="button" value=picVal }}
+    {{>button id="map" class="button__chat button__chat_map" type="button" value=mapVal }}
+    {{>button id="file" class="button__chat button__chat_file" type="button" value=fileVal }}
+  {{/if}}
+  {{#if confirm}}
+    <h2 class="popup__message">{{message}}</h2>
+    {{>button id="confirm" class="button__confirm" message=message type="button" value=confirmVal}}
+  {{/if}}
+</div>

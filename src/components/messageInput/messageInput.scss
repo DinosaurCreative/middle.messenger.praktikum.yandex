@@ -1,0 +1,27 @@
+@import "../../utils/colors.scss";
+
+.input-msg-container {
+  background: $sideMenuBackground;
+  height: 65px;
+  position: fixed;
+  inset: auto 0 0 410px;
+  display: flex;
+  flex-direction: row;
+  &:before {
+    content: "";
+    height: 100%;
+    border-left: 2px solid $lightgrey;
+    position: absolute;
+  };
+  &:after {
+    content: "";
+    width: 100%;
+    border-top: 2px solid #cecccc;
+    position: absolute;
+    top: 0;
+    right: 0px;
+  };
+  &_folded {
+    left: 80px;
+  };
+};

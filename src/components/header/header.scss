@@ -1,0 +1,12 @@
+@import "../../utils/colors.scss";
+
+.header {
+  &__form {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 auto 25px;
+    font-size: 25px;
+    color: $darkgreyFont;
+    font-weight: 400;
+  };
+};
