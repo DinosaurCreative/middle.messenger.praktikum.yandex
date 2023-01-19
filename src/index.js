@@ -1,17 +1,13 @@
 import "./index.scss";
 import Handlebars from "handlebars";
-import template from 'bundle-text:./index.hbs';
+import template from "bundle-text:./index.hbs";
 import {
-  login, registration, main, errorPage,
+  login, registration, main, errorPage
 } from "./utils/componentsImports";
 
 import * as constants from "./constants/constants";
 
 const compilation = Handlebars.compile(template);
-
-Handlebars.registerHelper('router', function (path) {
-  return document.location.pathname = path;
-});
 
 const state = {
   sideMenuFolded: false,
@@ -22,35 +18,34 @@ const state = {
 
 const mainComponentRouting = (path) => {
   return {
-    userInfo: path === 'user-info',
-    password: path === 'password',
-    chat: path === 'chat',
+    userInfo: path === "user-info",
+    password: path === "password",
+    chat: path === "chat",
   };
 };
-
 const routing = () => {
-  const path = document.location.pathname.split('/');
-
-  if(path[1] === 'login' ) {
+  const path = document.location.pathname.split("/");
+  
+  if(path[1] === "login" ) {
     return compilation({
-      class: 'main-page',
+      class: "main-page",
       login: login({
         inputs: constants.loginFormFields,
       }),
     });
   };
-  if(path[1] === 'registration' ) {
+  if(path[1] === "registration" ) {
     return compilation({
-      class: 'main-page',
+      class: "main-page",
       registration: registration({
         inputs: constants.registrationFormFields,
       }),
     });
   };
   
-  if(path[1] === 'main' ) {
+  if(path[1] === "main" ) {
     return compilation({
-      class: 'main-page',
+      class: "main-page",
       main: main({
         chatUser: constants.chat,
         folded: state.sideMenuFolded,
@@ -65,7 +60,7 @@ const routing = () => {
   };
 
   return compilation({
-    class: 'main-page',
+    class: "main-page",
     errorPage: errorPage({
       errorNumber: 404,
       message: "Страница не найдена",
@@ -73,4 +68,4 @@ const routing = () => {
   });
 };
   
-document.getElementById('root').innerHTML = routing();
+document.getElementById("root").innerHTML = routing();
