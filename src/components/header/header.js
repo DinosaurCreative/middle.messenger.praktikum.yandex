@@ -1,6 +1,6 @@
+import "./header.scss";
 import Handlebars from "handlebars";
 import tpl from "bundle-text:./header.hbs";
-import "./header.scss";
 
 Handlebars.registerPartial("header", tpl);
 

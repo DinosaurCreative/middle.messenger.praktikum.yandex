@@ -1,13 +1,13 @@
 {
   "name": "y",
   "version": "1.0.0",
-  "source": "src/index.html",
+  "source": "index.html",
   "description": "",
   "engine": "node.js v14.17.0",
   "scripts": {
-    "dev": "parcel index.html",
+    "dev": "parcel index.html ",
     "build": "parcel build index.html",
-    "start": "npm run build && node router.js"
+    "start": "npm run build && node ./router.js"
   },
   "author": "",
   "license": "ISC",

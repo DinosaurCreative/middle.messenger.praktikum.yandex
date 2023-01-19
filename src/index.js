@@ -5,7 +5,7 @@ import {
   login, registration, main, errorPage,
 } from "./utils/componentsImports";
 
-import * as constants from "./constants/constans";
+import * as constants from "./constants/constants";
 
 const compilation = Handlebars.compile(template);
 
