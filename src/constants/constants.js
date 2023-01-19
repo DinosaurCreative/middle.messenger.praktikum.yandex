@@ -10,6 +10,11 @@ export const registrationFormFields = [
     type:  "text",
   },
   {
+    id: "display_name",
+    title: "Имя в чате",
+    type: "text",
+  },
+  {
     id: "login",
     title: "Логин",
     type:  "text",

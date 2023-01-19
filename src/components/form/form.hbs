@@ -3,6 +3,7 @@
 {{/if}}
 <form class="form {{formClass}}" type={{type}} id={{formId}}>
   {{#each inputs}}
+  {{log formInput}}
     {{>formInput id=id 
                  labeClass=labeClass 
                  title=title

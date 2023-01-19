@@ -24,7 +24,6 @@ import errorPage from "../pages/errorPage/errorPage";
 import temporaryNavigation from "../components/temporaryNavigation/temporaryNavigation";
 import navBtn from "../components/temporaryNavigation/navBtn/navBtn";
 
-
 export {
   title,
   button,
@@ -51,4 +50,4 @@ export {
   errorPage,
   temporaryNavigation,
   navBtn
-}
+};
