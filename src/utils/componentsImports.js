@@ -21,6 +21,8 @@ import logo from "../components/logo/logo";
 import userForm from "../components/userForm/userForm";
 import passwordForm from "../components/passwordForm/passwordForm";
 import errorPage from "../pages/errorPage/errorPage";
+import temporaryNavigation from "../components/temporaryNavigation/temporaryNavigation";
+import navBtn from "../components/temporaryNavigation/navBtn/navBtn";
 
 
 export {
@@ -47,4 +49,6 @@ export {
   userForm,
   passwordForm,
   errorPage,
+  temporaryNavigation,
+  navBtn
 }

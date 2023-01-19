@@ -15,6 +15,18 @@
     text-decoration: none;
     color: $ligthBlueFont;
   };
+  &__link {
+    color: $blue;
+    text-decoration: none;
+  }
+  &__value{
+    color: $blue;
+    text-decoration: none;
+    &_form-btn{
+      color: $whiteFont;
+      text-decoration: none;
+    }
+  }  
   &__menu-btn {
     width: 40px;
     height: 40px;

@@ -1,0 +1,19 @@
+@import "../../utils/colors.scss";
+
+.temporary-avigation {
+  position: fixed;
+  height: 40px;
+  background-color: rgba(234, 113, 37, 0.214);
+  border-radius: 10px;
+  width: fit-content;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  &__text {
+    color: rgb(134, 133, 133);
+    margin: auto;
+    margin-top: 30px;
+  }
+}

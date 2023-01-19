@@ -241,4 +241,31 @@ export const passwordForms = [
     id: "repeat_password",
     type: "password",
   },
+];
+
+export const pathes = [
+  {
+    path: "/main/chat",
+    title: "Main",
+  },
+  {
+    path: "/login",
+    title: "Login",
+  },
+  {
+    path: "/registration",
+    title: "Registration",
+  },
+  {
+    path: "/error",
+    title: "Error",
+  },
+  {
+    path: "main/user-info",
+    title: "User info",
+  },
+  {
+    path: "main/password",
+    title: "Password",
+  },
 ]

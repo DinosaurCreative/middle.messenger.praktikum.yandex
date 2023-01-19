@@ -2,7 +2,7 @@ import "./index.scss";
 import Handlebars from "handlebars";
 import template from "bundle-text:./index.hbs";
 import {
-  login, registration, main, errorPage
+  login, registration, main, errorPage, temporaryNavigation
 } from "./utils/componentsImports";
 
 import * as constants from "./constants/constants";
@@ -23,49 +23,47 @@ const mainComponentRouting = (path) => {
     chat: path === "chat",
   };
 };
-const routing = () => {
-  const path = document.location.pathname.split("/");
-  
-  if(path[1] === "login" ) {
-    return compilation({
-      class: "main-page",
-      login: login({
-        inputs: constants.loginFormFields,
-      }),
-    });
+
+const getComponent = (path) => {
+  if(path[1] === "error" ) {
+    return errorPage({
+      errorNumber: 404,
+      message: "Страница не найдена",
+    })
   };
+
   if(path[1] === "registration" ) {
-    return compilation({
-      class: "main-page",
-      registration: registration({
-        inputs: constants.registrationFormFields,
-      }),
-    });
+    return registration({
+      inputs: constants.registrationFormFields
+    })
   };
   
   if(path[1] === "main" ) {
-    return compilation({
-      class: "main-page",
-      main: main({
-        chatUser: constants.chat,
-        folded: state.sideMenuFolded,
-        chatsArr: constants.chats,
-        inputsValues: constants.userData,
-        passwordsValues: constants.passwordForms,
-        route: mainComponentRouting(path[2]),
-        toolPopupShown: state.coverPopupShown,
-        coverPopupShown: state.toolPopupShown,
-      }),
-    });
+    return main({
+      chatUser: constants.chat,
+      folded: state.sideMenuFolded,
+      chatsArr: constants.chats,
+      inputsValues: constants.userData,
+      passwordsValues: constants.passwordForms,
+      route: mainComponentRouting(path[2]),
+      toolPopupShown: state.coverPopupShown,
+      coverPopupShown: state.toolPopupShown,
+    })
   };
 
+  return login({ inputs: constants.loginFormFields});
+}
+
+const routing = () => {
+  const path = document.location.pathname.split("/");
+  
   return compilation({
     class: "main-page",
-    errorPage: errorPage({
-      errorNumber: 404,
-      message: "Страница не найдена",
-    }),
-  });
+    component: getComponent(path),
+    temporaryNavigation: temporaryNavigation({
+      pathes: constants.pathes,
+    })
+  })
 };
   
 document.getElementById("root").innerHTML = routing();

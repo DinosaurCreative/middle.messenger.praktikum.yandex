@@ -2,17 +2,20 @@
 <div class="login">
   {{>form text="Вход" 
           formClass="form__welcome form__welcome_login" 
-          type="submit" 
+          type="button" 
           formId="login"
           inputClass="input__login"
           btnId="login"
           value="Войти"
-          btnClass="button__form button__form_login"}}
+          btnClass="button__form button__form_login"
+          linkHref="/main/chat"
+          valueClass="button__value_form-btn"}}
 
   {{>button id="to-registration"
             value="Еще не зарегистрированы?"
             class="button__switch-location"
             type="button"
-            href='/registration'
+            linkHref='/registration'
+            valueClass="button__value"
             }}
 </div> 
