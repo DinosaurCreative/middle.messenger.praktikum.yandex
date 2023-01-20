@@ -1,0 +1,14 @@
+.chats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: scroll;
+  row-gap: 10px;
+  &__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    list-style-type: none;
+    padding-left: 0
+  }
+};

@@ -1,0 +1,28 @@
+{
+  "name": "Chat",
+  "version": "1.0.0",
+  "source": "index.html",
+  "description": "",
+  "engine": "node.js v14.17.0",
+  "scripts": {
+    "dev": "parcel ./index.html --port 3000 --open",
+    "build": "parcel build ./index.html",
+    "start": "npm run build && node ./router.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2",
+    "handlebars": "4.7.7",
+    "scss": "0.2.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "2.8.2",
+    "@parcel/transformer-sass": "2.8.2",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "parcel": "2.8.2",
+    "standard": "*"
+  }
+}

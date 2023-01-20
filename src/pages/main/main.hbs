@@ -1,0 +1,6 @@
+<div class="main">
+  {{#if route.chat}}{{>currentChat  chatUser=chatUser}}{{/if}}
+  {{#if route.userInfo}}{{>userForm folded=folded inputs=inputsValues}}{{/if}}
+  {{#if route.password}}{{>passwordForm folded=folded inputs=passwordsValues}}{{/if}}
+  {{>sidemenu folded=folded chats=chatsArr}}
+</div>

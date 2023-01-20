@@ -1,0 +1,76 @@
+@import "../../utils/colors.scss";
+
+.input {
+  background-color: $inputBackground;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: all .3s ease;
+  &_error {
+    border: .3px solid $redError;
+  };
+  &_success {
+    border: .3px solid $greenSuccess;
+  };
+  &:focus {
+    filter: drop-shadow(0px 0px 3px $shadowGrey);
+    background-color: $inputBackgroundFocus;
+    box-shadow: 0px 0px 3px $shadowGrey inset;
+    &::placeholder {
+      opacity: 0;
+    };
+  };
+  &::placeholder {
+    transition: all .05s linear;
+    font-size: 14px;
+    font-weight: 400;
+    color: $placeholderGrey;
+  };
+  &__search {
+    width: 100%;
+    height: 50px;
+    background-color: $inputBackground;
+    outline: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    &::placeholder {
+      text-align: center;
+    };
+    &_folded {
+      visibility: hidden;
+    };
+  };
+  &__message {
+    width: 100%;
+    margin: 10px 25px;
+    background-color: $inputBackground;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    word-wrap: normal;
+    &::placeholder {
+      padding-left: 7px;
+    };
+  };
+  &__form {
+    border: none;
+    background-color: $greyInput;
+    border-radius: 10px;
+    min-height: 30px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 12px;
+    color: $darkgreyFont;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 5px rgb(197, 197, 197);
+    &_error {
+      border-bottom: .6px solid $redError;
+    };
+    &_pass {
+      border-bottom: 1px solid $greenSuccess;
+    };
+  };
+};

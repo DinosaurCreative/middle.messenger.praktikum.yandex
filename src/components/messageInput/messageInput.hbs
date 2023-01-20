@@ -1,0 +1,13 @@
+{{#if folded}}
+<div class="input-msg-container input-msg-container_folded">
+  {{>button id="attach" class="button__message-input button__message-input_attach" type="button"}}
+  {{>input class="input__message" placeholder="Сообщение..." }}
+  {{>button id="send" class="button__message-input button__message-input_send" type="button"}}
+</div>
+{{else}}
+<div class="input-msg-container">
+  {{>button id="attach" class="button__message-input button__message-input_attach" type="button"}}
+  {{>input class="input__message" placeholder="Сообщение..." }}
+  {{>button id="send" class="button__message-input button__message-input_send" type="button"}}
+</div>
+{{/if}}

@@ -1,0 +1,23 @@
+{{#if folded}}
+<div class="current-chat-header current-chat-header_folded">
+  <div class="current-chat-header__container">
+    {{>avatar src=image alt=name class="chat__avatar"}}
+    <div class="current-chat-header__info-container">
+      <h3 class="current-chat-header__name">{{{name}}}</h3>
+      <p class="current-chat-header__presence">Был(а) в сети 5 часов назад</p>
+    </div>
+  </div>
+  {{>button id="header-menu" class="button__menu-btn" value="..." valueClass="button__value"}}
+</div>
+{{else}}
+<div class="current-chat-header">
+  <div class="current-chat-header__container">
+    {{>avatar src=image alt=name class="chat__avatar"}}
+    <div class="current-chat-header__info-container">
+      <h3 class="current-chat-header__name">{{{name}}}</h3>
+      <p class="current-chat-header__presence">Был(а) в сети 5 часов назад</p>
+    </div>
+  </div>
+  {{>button id="header-menu" class="button__menu-btn" value="..." valueClass="button__value"}}
+</div>
+{{/if}}

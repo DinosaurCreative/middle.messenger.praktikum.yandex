@@ -1,0 +1,20 @@
+{{#if folded}}
+  <div class="chat chat_folded">
+    {{>avatar src=avatar alt=owner class="chat__avatar"}}
+    {{#if newMessages}}
+      <p class="chat__unread-msg">{{newMessages}}</p>
+    {{/if}}
+  </div>
+{{else}}
+  <div class="chat ">
+    {{>avatar src=avatar alt=owner class="chat__avatar"}}
+    <div class="chat__container">
+      <h3 class="chat__name">{{owner}}</h3>
+      <p class="chat__message">{{message}}</p>
+      {{#if newMessages}}
+        <p class="chat__unread-msg">{{newMessages}}</p>
+      {{/if}}
+      <p class="chat__date">{{lastMessageTime}}</p>
+    </div>
+  </div>
+{{/if}}

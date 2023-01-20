@@ -1,0 +1,44 @@
+{{#if folded}}
+  {{#if chatUser}}
+    {{>popup chat="true" clearVal="Очистить чат" removeVal="Удалить чат" popupClass="popup__header-options-container"}}
+    {{>popup confirm="true" message="Вы действительно хотите очистить чат?" popupClass="popup__confirm-container" confirmVal="Удалить"}}  
+    {{#if folded}}
+      {{#if chatToolPopupShown}}{{>popup input="true" picVal="Фото или видео" mapVal="Геолокация" fileVal="Файл" popupClass="popup__input-options-container popup__input-options-container_folded"}}{{/if}}
+    {{else}}
+      {{#if chatToolPopupShown}}{{>popup input="true" picVal="Фото или видео" mapVal="Геолокация" fileVal="Файл" popupClass="popup__input-options-container"}}{{/if}}
+    {{/if}}
+    {{>currentChatHeader name=chatUser.name image=chatUser.image }}
+    <div class="current-chat current-chat_folded">
+      {{#each chatUser.chat}}
+        {{>message }}
+      {{/each}}
+    </div>
+    {{>messageInput}}
+    {{else}}
+      <div class="current-chat__no-chat-selected">
+        <h2 class="current-chat__no-chat-selected_message">Выберите чат для отправки сообщения</h2>
+      </div>
+    {{>popup chat="true" clearVal="Очистить чат" removeVal="Удалить чат" popupClass="popup__header-options-container"}}
+    {{/if}}
+  {{else}}
+  {{#if chatUser}}
+    {{#if coverPopupShown}}{{>popup confirm="true" message="Вы действительно хотите очистить чат?" popupClass="popup__confirm-container" confirmVal="Удалить"}}{{/if}}
+    
+    {{#if folded }}
+      {{#if toolPopupShown}}{{>popup input="true" picVal="Фото или видео" mapVal="Геолокация" fileVal="Файл" popupClass="popup__input-options-container popup__input-options-container"}}{{/if}}
+    {{else}}
+       {{#if toolPopupShown}}{{>popup input="true" picVal="Фото или видео" mapVal="Геолокация" fileVal="Файл" popupClass="popup__input-options-container"}}{{/if}}
+    {{/if}}
+    {{>currentChatHeader name=chatUser.name image=chatUser.image }}
+    <div class="current-chat current-chat">
+      {{#each chatUser.chat}}
+        {{>message }}
+      {{/each}}
+    </div>
+    {{>messageInput}}
+    {{else}}
+      <div class="current-chat__no-chat-selected">
+        <h2 class="current-chat__no-chat-selected_message">Выберите чат для отправки сообщения</h2>
+      </div>
+  {{/if}}
+{{/if}}

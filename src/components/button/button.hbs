@@ -1,0 +1,13 @@
+<button 
+	id={{id}}
+	class="button {{class}}"
+	type={{type}}
+	href={{href}}
+>
+	{{#if value}}
+		<a class="{{valueClass}}" href="{{linkHref}}">{{value}}</a>
+	{{/if}}
+	{{#if src}}
+		{{>avatar class="avatar__user-page"}}
+	{{/if}}
+</button>

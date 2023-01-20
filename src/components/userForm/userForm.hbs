@@ -1,0 +1,29 @@
+{{#if folded}}
+  <div class="user-form user-form_folded">
+{{else}}
+  <div class="user-form user-form_opened">
+{{/if}}
+  {{>button id="avatar"
+            class="button__avatar"
+            type="button"
+            src=inputs.avatar
+            alt=inputs.first_name}}
+
+  {{>form formClass="form__user-data" 
+          type="submit" 
+          formId="user-data"
+          btnId="change_user_data"
+          value="Сохранить"
+          btnClass="button__form button__form_user-data"
+          inputs=inputs.inputs}}
+
+  {{>button id="to-pass-change"
+            value="Поменять пароль"
+            class="button__switch-location"
+            type="button"}}
+
+  {{>button id="exit"
+            value="Выйти"
+            class="button__exit"
+            type="button"}}
+</div>
