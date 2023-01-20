@@ -13,7 +13,7 @@ const state = {
   sideMenuFolded: false,
   coverPopupShown: false,
   toolPopupShown: false,
-  chatToolPopupShown: true,
+  chatToolPopupShown: false,
 };
 
 const mainComponentRouting = (path) => {

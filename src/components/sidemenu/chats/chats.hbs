@@ -3,29 +3,38 @@
   <div class="button__fold-menu-container">
     {{>button id="fold-btn" class="button__fold-menu"}}
   </div>
-  {{#each chatsArr}}
-    {{>chat  avatar=avatar 
-             owner=owner
-             message=message
-             lastMessageTime=lastMessageTime
-             newMessages=newMessages
-             folded=../folded
-    }}
+  
+  <ul class="chats__list">
+    {{#each chatsArr}}
+    <li>
+      {{>chat  avatar=avatar 
+              owner=owner
+              message=message
+              lastMessageTime=lastMessageTime
+              newMessages=newMessages
+              folded=../folded
+      }}
+    </li>
   {{/each}}
+  </ul>
 </div>
 {{else}}
 <div class="chats">
   <div class="button__fold-menu-container">
     {{>button id="fold-btn" class="button__fold-menu" onclick=foldSidemenuHandler}}
   </div>
-  {{#each chatsArr}}
-    {{>chat  avatar=avatar 
-             owner=owner
-             message=message
-             lastMessageTime=lastMessageTime
-             newMessages=newMessages
-             folded=../folded
-    }}
-  {{/each}}
+  <ul class="chats__list">
+    {{#each chatsArr}}
+      <li>
+        {{>chat  avatar=avatar 
+                owner=owner
+                message=message
+                lastMessageTime=lastMessageTime
+                newMessages=newMessages
+                folded=../folded
+        }}
+      </li>
+    {{/each}}
+  </ul>
 </div>
 {{/if}}
